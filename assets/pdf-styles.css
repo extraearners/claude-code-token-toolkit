@@ -1,0 +1,343 @@
+/* Claude Code Token Optimization Toolkit — PDF Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* ─── Page Setup ─────────────────────────────────────────── */
+
+@page {
+  size: A4;
+  margin: 22mm 20mm 25mm 20mm;
+}
+
+@page :first {
+  margin: 0;
+}
+
+/* ─── Reset & Base ───────────────────────────────────────── */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  color: #1c2333;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ─── Cover Page ─────────────────────────────────────────── */
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  background: #0d1321;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 64px;
+  page-break-after: always;
+  break-after: page;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.cover-top {
+  border-top: 3px solid #00c49a;
+  padding-top: 40px;
+}
+
+.cover-eyebrow {
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00c49a;
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+  margin-bottom: 28px;
+}
+
+.cover-title {
+  font-size: 34pt;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  max-width: 520px;
+}
+
+.cover-subtitle {
+  font-size: 13pt;
+  color: #8899aa;
+  line-height: 1.5;
+  max-width: 440px;
+  margin: 0;
+}
+
+.cover-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.cover-stat {
+  border-left: 2px solid #00c49a;
+  padding-left: 14px;
+}
+
+.cover-stat-number {
+  font-size: 22pt;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cover-stat-label {
+  font-size: 8.5pt;
+  color: #667788;
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cover-meta {
+  font-size: 9pt;
+  color: #445566;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.8;
+}
+
+.cover-price-block {
+  text-align: right;
+}
+
+.cover-price {
+  font-size: 26pt;
+  font-weight: 700;
+  color: #00c49a;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cover-price-label {
+  font-size: 8.5pt;
+  color: #556677;
+  margin-top: 2px;
+}
+
+/* ─── Content Area ───────────────────────────────────────── */
+
+.content-body {
+  padding: 0;
+}
+
+/* ─── Typography ─────────────────────────────────────────── */
+
+h1 {
+  font-size: 20pt;
+  font-weight: 700;
+  color: #0d1321;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 40px 0 12px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0d1321;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: 700;
+  color: #0d1321;
+  letter-spacing: -0.01em;
+  margin: 32px 0 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e0e5ee;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  color: #00a07a;
+  margin: 22px 0 8px 0;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: #1c2333;
+  margin: 18px 0 6px 0;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+strong {
+  font-weight: 600;
+  color: #0d1321;
+}
+
+a {
+  color: #007a5e;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e5ee;
+  margin: 28px 0;
+}
+
+blockquote {
+  border-left: 3px solid #00c49a;
+  background: #f0faf7;
+  margin: 16px 0;
+  padding: 12px 18px;
+  color: #2a3a4a;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ─── Tables ─────────────────────────────────────────────── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+  margin: 16px 0 24px 0;
+  page-break-inside: avoid;
+}
+
+thead {
+  background: #0d1321;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+thead th {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 8.5pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  text-align: left;
+  border: none;
+}
+
+tbody tr:nth-child(even) {
+  background: #f5f7fa;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #e8ecf2;
+  color: #2a3a4a;
+  vertical-align: top;
+}
+
+tbody tr:last-child td {
+  border-bottom: 2px solid #0d1321;
+}
+
+/* ─── Code ───────────────────────────────────────────────── */
+
+code {
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 8.5pt;
+  background: #f0f2f5;
+  color: #0d6e52;
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid #dde2ea;
+}
+
+pre {
+  background: #0d1321;
+  color: #c9d8e8;
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin: 14px 0 20px 0;
+  overflow-x: auto;
+  page-break-inside: avoid;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+pre code {
+  background: none;
+  color: #c9d8e8;
+  border: none;
+  padding: 0;
+  font-size: 8.5pt;
+  line-height: 1.6;
+}
+
+/* ─── Lists ──────────────────────────────────────────────── */
+
+ul, ol {
+  margin: 8px 0 14px 0;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+li > p { margin: 0; }
+
+/* ─── Section divider between chapters ──────────────────── */
+
+h1:not(:first-of-type) {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* ─── Page Footer ────────────────────────────────────────── */
+
+@page :not(:first) {
+  @bottom-right {
+    content: counter(page);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8pt;
+    color: #99aabb;
+  }
+  @bottom-left {
+    content: "Claude Code Token Optimization Toolkit";
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    color: #99aabb;
+  }
+}
+
+/* ─── Executive Summary callout ──────────────────────────── */
+
+.exec-summary {
+  background: #f0faf7;
+  border: 1px solid #b3e8d8;
+  border-left: 4px solid #00c49a;
+  border-radius: 0 6px 6px 0;
+  padding: 18px 22px;
+  margin: 20px 0 28px 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
